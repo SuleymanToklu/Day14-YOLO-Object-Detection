@@ -8,7 +8,7 @@ TEXT_CONTENT = {
         'page_title': "YOLO ile Nesne Tespiti",
         'page_icon': "📸",
         'main_title': "📸 YOLOv5 ile Gerçek Zamanlı Nesne Tespiti",
-        'description': "Bir resim yükleyin veya kameranızı kullanarak canlı nesne tespiti yapın. Model, 80 farklı nesne türünü tanıyabilir.",
+        'description': "Bir resim yükleyin veya kameranızı kullanarak canlı nesne tespiti yapın.",
         'tab1_name': "🖼️ Resimden Tespit",
         'tab2_name': "🎯 Proje Detayları",
         'tab1_header': "Bir Görüntü Yükleyin",
@@ -30,7 +30,7 @@ TEXT_CONTENT = {
         'page_title': "Object Detection with YOLO",
         'page_icon': "📸",
         'main_title': "📸 Real-Time Object Detection with YOLOv5",
-        'description': "Upload an image or use your camera for live object detection. The model can recognize 80 different types of objects.",
+        'description': "Upload an image or use your camera for live object detection.",
         'tab1_name': "🖼️ Detection from Image",
         'tab2_name': "🎯 Project Details",
         'tab1_header': "Upload an Image",
@@ -54,7 +54,9 @@ st.sidebar.title("Language / Dil")
 lang = st.sidebar.radio("Choose Language", ('TR', 'EN'), label_visibility="collapsed")
 TEXT = TEXT_CONTENT[lang]
 
+
 st.set_page_config(page_title=TEXT['page_title'], page_icon=TEXT['page_icon'], layout="wide")
+
 
 @st.cache_resource
 def load_model():
